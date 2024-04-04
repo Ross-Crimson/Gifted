@@ -1,5 +1,6 @@
 import { AccountController } from "./controllers/AccountController.js";
 import { GiftsController } from "./controllers/GiftsController.js";
+import { GifyController } from "./controllers/GifyController.js";
 import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 
@@ -7,7 +8,7 @@ import { Router } from "./utils/Router.js";
 export const router = new Router([
   {
     path: '',
-    controllers: [GiftsController],
+    controllers: [GiftsController, GifyController],
     view: 'app/views/GiftView.html'
   },
   {

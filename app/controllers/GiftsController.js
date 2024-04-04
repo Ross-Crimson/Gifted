@@ -21,6 +21,7 @@ export class GiftsController {
     }
 
     DrawGifts() {
+        console.log("drew gifts")
         let giftDisplayHTML = ''
         AppState.gifts.forEach(gift => giftDisplayHTML += gift.GiftDisplayTemplate)
         setHTML('gifts-display', giftDisplayHTML)
@@ -38,7 +39,7 @@ export class GiftsController {
         event.preventDefault()
         const form = event.target
         const giftData = getFormData(form)
-        console.log(giftData)
+
         await giftsService.CreateGift(giftData)
     }
 }

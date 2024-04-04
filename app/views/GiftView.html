@@ -1,21 +1,38 @@
-<section>
+<section class="container-fluid">
     <div class="row">
-        <div class="col-3">
-            <form onsubmit="app.GiftsController.CreateGift()">
-                <h2>Big Santa Energy</h2>
-                <div>
-                    <label for="tag">Tag</label>
-                    <input type="text" name="tag" id="tag">
-                </div>
-                <div>
-                    <label for="url">Url</label>
-                    <input type="url" name="url" id="tag">
-                </div>
-                <button>Submit</button>
-            </form>
+        <div class="col-4">
+            <div>
+                <form onsubmit="app.GiftsController.CreateGift()">
+                    <h2 class="p-3">Big Santa Energy</h2>
+                    <div>
+                        <label for="tag">Tag</label>
+                        <input type="text" name="tag" id="tag" min="3" class="form-control" required>
+                    </div>
+                    <div>
+                        <label for="url">Url</label>
+                        <input type="url" name="url" id="url" class="form-control" required>
+                    </div>
+                    <button class="btn">Submit</button>
+                </form>
+            </div>
+
+            <div class="mt-3">
+                <form onsubmit="app.GifyController.Search()">
+                    <div>
+                        <label for="gifName">Search Gifs</label>
+                        <input type="text" name="gifName" id="gifName" class="form-control" required>
+                    </div>
+                    <button class="btn"><i class="mdi mdi-magnify"></i></button>
+                </form>
+            </div>
+
+
+            <div class="row" id="gif-section">
+
+            </div>
         </div>
 
-        <div class="col-9">
+        <div class="col-8">
             <div id="gifts-display" class="row">
 
                 <!-- <div class="col-4">
